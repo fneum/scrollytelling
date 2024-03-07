@@ -1,8 +1,10 @@
 body, html {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Gudea', sans-serif;
     margin: 0;
     padding: 0;
     overflow-x: hidden;
+    color: #444e53;
+    background-color: #f9fafb;
 }
 
 .scroll__text, .scroll__graphic {
@@ -62,8 +64,11 @@ body, html {
     width: 100%; /* Full width */
     text-align: center; /* Center the title text */
     padding: 5px 0; /* Add some padding above and below the title */
-    background-color: #ececec; /* Optional: background color for the title area */
+    background-color: #8f3547; /* Optional: background color for the title area */
     margin: 0 0 5px 0; /* Optional: add some margin below the title area */
     box-sizing: border-box; /* Ensures padding does not add to the total width */
+    color: #ffffff; /* Make the text color white */
 }
 
+#444e53
+#f9fafb
