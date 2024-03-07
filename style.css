@@ -1,0 +1,69 @@
+body, html {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+.scroll__text, .scroll__graphic {
+    position: fixed;
+    top: 100px;
+    bottom: 0;
+    width: 50%;
+    height: calc(100% - 100px);
+}
+
+.scroll__text {
+    left: 0;
+    padding: 0 1rem;
+    overflow-y: auto;
+    -ms-overflow-style: none; /* Internet Explorer 10+ */
+    scrollbar-width: none; /* Firefox */
+    overflow-y: scroll; /* Enable scrolling */
+}
+
+.scroll__text::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera*/
+}
+
+.scroll__graphic {
+    right: 0;
+    width: 50%;
+}
+
+.graphic__container {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0; /* Start with the figure fully transparent */
+    transition: opacity 0.5s ease-in-out; /* Smooth transition for the opacity change */
+    pointer-events: none; /* Prevents clicks when the figure is not visible */
+}
+
+.graphic__container.visible {
+    opacity: 1; /* Fully visible when this class is added */
+    pointer-events: auto; /* Allows interaction when the figure is visible */
+}
+
+
+.step {
+    margin: 0 auto;
+    padding: 1rem 0; /* Top and bottom padding for content */
+    padding-top: 300px; /* Increase top padding to extend the step */
+    padding-bottom: 300px; /* Increase bottom padding to extend the step */
+    max-width: 600px;
+    box-sizing: border-box; /* Ensures padding is included in the element's total height */
+    position: relative; /* Ensures any absolutely positioned children are relative to the step */
+}
+
+
+.full-width-title {
+    width: 100%; /* Full width */
+    text-align: center; /* Center the title text */
+    padding: 5px 0; /* Add some padding above and below the title */
+    background-color: #ececec; /* Optional: background color for the title area */
+    margin: 0 0 5px 0; /* Optional: add some margin below the title area */
+    box-sizing: border-box; /* Ensures padding does not add to the total width */
+}
+

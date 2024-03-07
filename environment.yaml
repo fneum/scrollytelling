@@ -1,0 +1,7 @@
+name: scrollytelling
+channels:
+- conda-forge
+dependencies:
+- python
+- pandas
+- plotly
