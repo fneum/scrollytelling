@@ -61,14 +61,11 @@ body, html {
 
 
 .full-width-title {
-    width: 100%; /* Full width */
+    width: 100%;
     text-align: center; /* Center the title text */
     padding: 5px 0; /* Add some padding above and below the title */
     background-color: #8f3547; /* Optional: background color for the title area */
     margin: 0 0 5px 0; /* Optional: add some margin below the title area */
     box-sizing: border-box; /* Ensures padding does not add to the total width */
-    color: #ffffff; /* Make the text color white */
+    color: #ffffff;
 }
-
-#444e53
-#f9fafb

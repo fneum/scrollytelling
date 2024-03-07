@@ -2,17 +2,13 @@
 
 ## Installation
 
-To recreate plots, the right environment is needed.
-
-```sh
+```bash
 conda env create -f environment.yaml
 ```
 
-## Re-create plots
+## Run server
 
-```sh
+```bash
 conda activate scrollytelling
-python figures.py
+python app.py
 ```
-
-Then, open the `main.html`.

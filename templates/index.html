@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Scrollama Storytelling</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Gudea:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/scrollama"></script>
-    <!-- <script src="https://cdn.plot.ly/plotly-latest.min.js"></script> -->
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
 </head>
 <body>
 
@@ -57,14 +57,32 @@
             sit amet, dictum et tellus. 
         </p>
     </div>
+    <div class="step" data-step="4">
+        <p><strong>And another one, ad infinitum.</strong></p>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed posuere
+            sem a nunc consequat elementum. Etiam eu velit sed diam blandit
+            fringilla a at orci. Suspendisse dictum, metus in malesuada
+            tincidunt, mi purus porta neque, tristique posuere leo mi in nibh.
+            Phasellus dignissim dolor viverra feugiat aliquam. Curabitur in
+            mattis diam. Vivamus rhoncus vitae tortor a bibendum. Vivamus
+            volutpat lobortis bibendum. Curabitur odio nisl, vulputate a viverra
+            sit amet, dictum et tellus. 
+        </p>
+    </div>
 </div>
 
 <div class="scroll__graphic">
     <div class="graphic__container" id="sticky">
-        <iframe src="figures/sample.html" width="700" height="500" frameborder="0"></iframe>
+        <div id="plotly-div"></div>
+        <script>
+            var graphs = {{ graphJSON | safe }};
+            Plotly.newPlot('plotly-div', graphs);
+        </script>
     </div>
 </div>
 
-<script src="script.js"></script>
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+
 </body>
 </html>
